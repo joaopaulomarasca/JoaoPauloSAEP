@@ -71,7 +71,7 @@ async function atualizarEstoque() {
         await client.connect();
 
         const lista = await client.query(
-            'SELECT id, nome, estoque FROM itens ORDER BY nome'
+            'SELECT * FROM itens ORDER BY nome'
         );
         console.log('ATUALIZAR ESTOQUE\n');
         lista.rows.forEach(item => {
@@ -101,7 +101,7 @@ async function removerItem() {
         await client.connect();
 
         const lista = await client.query(
-            'SELECT id, nome, tipo FROM itens ORDER BY nome'
+            'SELECT * FROM itens ORDER BY nome'
         );
         console.log('  REMOVER ITEM\n');
         lista.rows.forEach(item => {
