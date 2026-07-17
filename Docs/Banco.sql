@@ -4,7 +4,8 @@ CREATE TABLE itens (
     tipo       VARCHAR(50)  NOT NULL,
     preco      DECIMAL(10,2) NOT NULL,
     estoque    INTEGER DEFAULT 0,
-    descricao  TEXT
+    descricao  TEXT,
+	data_criacao  TIME
 );
 
 INSERT INTO itens (nome, tipo, preco, estoque, descricao, data_criacao) VALUES
@@ -46,12 +47,3 @@ CREATE TABLE "estoque" (
 );
 
 
-INSERT INTO estoque (item_id, tipo_mov, quantidade, date) VALUES
-    (1, 'ENTRADA', 150, '2026-07-10 09:00:00'), 
-    (1, 'SAÍDA',   20,  '2026-07-12 14:30:00'), 
-    (2, 'ENTRADA', 130, '2026-07-10 09:15:00'), 
-    (3, 'ENTRADA', 20,  '2026-07-11 10:00:00'), 
-    (3, 'SAÍDA',   5,   '2026-07-13 16:00:00'), 
-    (5, 'ENTRADA', 1000,'2026-07-15 08:00:00'), 
-    (6, 'ENTRADA', 30,  '2026-07-15 08:30:00'),
-    (6, 'SAÍDA',   5,   '2026-07-16 11:00:00'); 
