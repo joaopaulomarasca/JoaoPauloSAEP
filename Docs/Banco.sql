@@ -9,7 +9,7 @@ CREATE TABLE itens (
 );
 
 INSERT INTO itens (nome, tipo, preco, estoque, descricao, data_criacao) VALUES
-('Teclado Gamer', 'Periférico', 150.00, 15, 'Teclado mecânico RGB', '2026-07-16')
+('Teclado Gamer', 'Periférico', 150.00, 15, 'Teclado mecânico RGB', '2026-07-16'),
     ('Uniforme',        'Roupa',      15.00, 130, 'Usar pra se vestir', '2026-04-16'),
     ('Botina',        'Roupa',      20.00, 130, 'CAlçado de usar no pé', '2026-01-11'),
     ('Vassoura',       'Objeto', 8.50, 15, 'Usado para varer', '2026-01-20'),
@@ -45,5 +45,3 @@ CREATE TABLE "estoque" (
     "date"       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT "fk_estoque_item" FOREIGN KEY ("item_id") REFERENCES "itens" ("id") ON DELETE CASCADE
 );
-
-
