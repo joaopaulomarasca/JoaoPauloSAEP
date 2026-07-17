@@ -8,7 +8,6 @@ CREATE TABLE itens (
     descricao     TEXT,
     data_criacao  DATE
 );
-
 INSERT INTO itens (nome, tipo, preco, estoque, descricao, data_criacao) VALUES
     ('Teclado Gamer',     'Periférico',  150.00, 15,   'Teclado mecanico RGB',     '2026-07-16'),
     ('Uniforme',          'Roupa',       15.00,  130,  'Usar pra se vestir',       '2026-04-16'),
@@ -18,6 +17,7 @@ INSERT INTO itens (nome, tipo, preco, estoque, descricao, data_criacao) VALUES
     ('Agua',              'Bebida',      45.00,  1000, 'Beba para matar a sua sede', '2025-10-30'),
     ('Refrigerante',      'Bebida',      12.00,  25,   'Bebida com gases',         '2025-12-16'),
     ('Café',              'Bebida',      35.00,  8,    'Café',                     '2026-07-16');
+
 CREATE TABLE IF NOT EXISTS "clientes" (
     "id"       SERIAL PRIMARY KEY,
     "name"     VARCHAR(255),
@@ -50,5 +50,4 @@ CREATE TABLE "estoque" (
     "date"       TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT "fk_estoque_item" FOREIGN KEY ("item_id") REFERENCES "itens" ("id") ON DELETE CASCADE
 );
-
 SELECT * FROM itens;
